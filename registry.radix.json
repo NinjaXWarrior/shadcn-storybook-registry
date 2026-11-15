@@ -248,6 +248,23 @@
       ]
     },
     {
+      "name": "code-block-story",
+      "type": "registry:component",
+      "title": "Code Block Story",
+      "description": "Interactive Storybook stories demonstrating code block usage and variants",
+      "categories": ["ui", "storybook", "code-block"],
+      "author": "Lloyd Richards <lloyd.d.richards@gmail.com>",
+      "registryDependencies": ["code-block", "use-highlighted-code"],
+      "dependencies": ["shiki@^4.6.0"],
+      "files": [
+        {
+          "path": "registry/ui/code-block-story/code-block-radix.stories.tsx",
+          "type": "registry:component",
+          "target": "@ui/code-block.stories.tsx"
+        }
+      ]
+    },
+    {
       "name": "collapsible-story",
       "type": "registry:component",
       "title": "Collapsible Story",
@@ -263,6 +280,23 @@
           "target": "@ui/collapsible.stories.tsx"
         }
       ]
+    },
+    {
+      "name": "combobox-story",
+      "type": "registry:component",
+      "title": "Combobox Story",
+      "description": "Interactive Storybook stories demonstrating combobox usage and variants",
+      "categories": ["ui", "storybook", "combobox"],
+      "author": "Lloyd Richards <lloyd.d.richards@gmail.com>",
+      "registryDependencies": ["combobox"],
+      "files": [
+        {
+          "path": "registry/ui/combobox-story/combobox-radix.stories.tsx",
+          "type": "registry:component",
+          "target": "@ui/combobox.stories.tsx"
+        }
+      ],
+      "dependencies": ["@base-ui/react"]
     },
     {
       "name": "command-story",
@@ -293,6 +327,29 @@
           "path": "registry/ui/context-menu-story/context-menu-radix.stories.tsx",
           "type": "registry:component",
           "target": "@ui/context-menu.stories.tsx"
+        }
+      ]
+    },
+    {
+      "name": "data-table-story",
+      "type": "registry:component",
+      "title": "Data Table Story",
+      "description": "Interactive Storybook stories demonstrating sorting, filtering, pagination, and row selection with TanStack Table",
+      "categories": ["ui", "storybook", "data-table", "data-display"],
+      "author": "Lloyd Richards <lloyd.d.richards@gmail.com>",
+      "registryDependencies": [
+        "table",
+        "button",
+        "checkbox",
+        "input",
+        "skeleton"
+      ],
+      "dependencies": ["@tanstack/react-table@^9.3.1"],
+      "files": [
+        {
+          "path": "registry/ui/data-table-story/data-table-radix.stories.tsx",
+          "type": "registry:component",
+          "target": "@ui/data-table.stories.tsx"
         }
       ]
     },
@@ -332,6 +389,22 @@
           "path": "registry/ui/dialog-story/dialog-radix.stories.tsx",
           "type": "registry:component",
           "target": "@ui/dialog.stories.tsx"
+        }
+      ]
+    },
+    {
+      "name": "direction-story",
+      "type": "registry:component",
+      "title": "Direction Story",
+      "description": "Interactive Storybook stories demonstrating direction usage and variants",
+      "categories": ["ui", "storybook", "direction"],
+      "author": "Lloyd Richards <lloyd.d.richards@gmail.com>",
+      "registryDependencies": ["direction", "tabs"],
+      "files": [
+        {
+          "path": "registry/ui/direction-story/direction-radix.stories.tsx",
+          "type": "registry:component",
+          "target": "@ui/direction.stories.tsx"
         }
       ]
     },
@@ -587,6 +660,22 @@
           "path": "registry/ui/menubar-story/menubar-radix.stories.tsx",
           "type": "registry:component",
           "target": "@ui/menubar.stories.tsx"
+        }
+      ]
+    },
+    {
+      "name": "native-select-story",
+      "type": "registry:component",
+      "title": "Native Select Story",
+      "description": "Interactive Storybook stories demonstrating native select usage and variants",
+      "categories": ["ui", "storybook", "native-select"],
+      "author": "Lloyd Richards <lloyd.d.richards@gmail.com>",
+      "registryDependencies": ["native-select", "label"],
+      "files": [
+        {
+          "path": "registry/ui/native-select-story/native-select-radix.stories.tsx",
+          "type": "registry:component",
+          "target": "@ui/native-select.stories.tsx"
         }
       ]
     },
@@ -1028,6 +1117,23 @@
       ]
     },
     {
+      "name": "trace-story",
+      "type": "registry:component",
+      "title": "Trace Story",
+      "description": "Interactive Storybook stories demonstrating trace usage and variants",
+      "categories": ["ui", "storybook", "trace"],
+      "author": "Lloyd Richards <lloyd.d.richards@gmail.com>",
+      "registryDependencies": ["trace"],
+      "dependencies": ["lucide-react"],
+      "files": [
+        {
+          "path": "registry/ui/trace-story/trace-radix.stories.tsx",
+          "type": "registry:component",
+          "target": "@ui/trace.stories.tsx"
+        }
+      ]
+    },
+    {
       "name": "typeset-story",
       "type": "registry:component",
       "title": "Typeset Story",
@@ -1121,7 +1227,13 @@
         "textarea",
         "toggle",
         "toggle-group",
-        "tooltip"
+        "tooltip",
+        "combobox",
+        "native-select",
+        "direction",
+        "code-block",
+        "use-highlighted-code",
+        "trace"
       ],
       "files": [
         {
@@ -1433,7 +1545,43 @@
           "path": "registry/tokens/typography-story/typography-radix.stories.tsx",
           "type": "registry:component",
           "target": "@ui/typography.stories.tsx"
+        },
+        {
+          "path": "registry/ui/data-table-story/data-table-radix.stories.tsx",
+          "type": "registry:component",
+          "target": "@ui/data-table.stories.tsx"
+        },
+        {
+          "path": "registry/ui/combobox-story/combobox-radix.stories.tsx",
+          "type": "registry:component",
+          "target": "@ui/combobox.stories.tsx"
+        },
+        {
+          "path": "registry/ui/native-select-story/native-select-radix.stories.tsx",
+          "type": "registry:component",
+          "target": "@ui/native-select.stories.tsx"
+        },
+        {
+          "path": "registry/ui/direction-story/direction-radix.stories.tsx",
+          "type": "registry:component",
+          "target": "@ui/direction.stories.tsx"
+        },
+        {
+          "path": "registry/ui/code-block-story/code-block-radix.stories.tsx",
+          "type": "registry:component",
+          "target": "@ui/code-block.stories.tsx"
+        },
+        {
+          "path": "registry/ui/trace-story/trace-radix.stories.tsx",
+          "type": "registry:component",
+          "target": "@ui/trace.stories.tsx"
         }
+      ],
+      "dependencies": [
+        "@tanstack/react-table@^9.3.1",
+        "@base-ui/react",
+        "shiki@^4.6.0",
+        "lucide-react"
       ]
     },
     {

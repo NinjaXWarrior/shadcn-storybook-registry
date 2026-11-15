@@ -5,6 +5,7 @@ import ts from "typescript";
 import { describe, expect, it } from "vitest";
 
 import { getRegistryPreviewPath } from "@/lib/registry-preview";
+import ariaRegistry from "@/registry.aria.json";
 import baseRegistry from "@/registry.base.json";
 import radixRegistry from "@/registry.radix.json";
 
@@ -53,6 +54,7 @@ function readStoryId(filePath: string): string {
 }
 
 for (const [registry, manifest] of [
+  ["aria", ariaRegistry],
   ["base", baseRegistry],
   ["radix", radixRegistry],
 ] as const) {
@@ -60,7 +62,9 @@ for (const [registry, manifest] of [
     for (const item of manifest.items) {
       if (item.categories.includes("collection")) {
         it(`${item.name} opens the Storybook collection`, () => {
-          expect(getRegistryPreviewPath(item, registry)).toBe("/storybook/");
+          expect(getRegistryPreviewPath(item, registry)).toBe(
+            `/storybook/${registry}/`,
+          );
         });
         continue;
       }
@@ -71,7 +75,7 @@ for (const [registry, manifest] of [
         expect(storyFiles).toHaveLength(1);
         const id = readStoryId(storyFiles[0].path);
         expect(getRegistryPreviewPath(item, registry)).toBe(
-          `/storybook/?path=/docs/${id}--docs`,
+          `/storybook/${registry}/?path=/docs/${id}--docs`,
         );
       });
     }
